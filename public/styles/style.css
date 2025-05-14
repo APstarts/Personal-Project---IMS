@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.nav-bar {
+    background-color: whitesmoke;
+}
+
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    margin-left: 5px;
+}
+
+.nav-bar ul li {
+    padding: 10px;
+    transition: 1s;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.nav-bar ul li:hover {
+    background-color: #DDDDDD;
+}
+
+.formTable-container {
+   display: flex;
+   justify-content: center;
+   min-height: 100vh;
+   align-items: center;
+}
+
+.form-container {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px grey;
+    border-radius: 20px;
+}
+
+.input-container button {
+    display: block;
+    margin: 5px 0px 0px 0px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+}
+
+.input-container button:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    border-radius: 20px;
+    background-color: orangered;
+    color: white;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+.input-container input {
+    margin: 5px 0px 5px 0px;
+    border: none;
+    border-bottom: 1px solid orangered;
+    outline: none;
+    width: auto;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 10px;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+
+th {
+    width: 100%;
+    padding: 5px;
+    background-color: #27548A;
+    color: white;
+}
+
+td {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+td button {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+}
+
+td button:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #DDDDDD;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#textSpan {
+    color:orangered
+}

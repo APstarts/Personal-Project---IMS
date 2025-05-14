@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag-IMS</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-items">Home</li>
+            <li class="nav-items">Analysis</li>
+            <li class="nav-items">Locations</li>
+        </ul>
+    </div>
+    <h1>Inventory <span id="textSpan">management</span> system</h1>
+    <div class="formTable-container">
+        <div class="form-container">
+            <div class="input-container">
+                <form action="/post" method="post">
+                    <label for="item_input">Item Name</label>
+                    <input type="text" name="itemName" id="item_input" placeholder="Write item name here">
+                    <label for="quantity_input">Quantity</label>
+                    <input type="number" name="quantity" id="quantity_input" placeholder="0.00">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <!-- <th>id</th> -->
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th></th>
+                    </tr>
+                    <% items.forEach(item=> { %>
+                        <tr>
+                            <!-- <td>
+                                <%= item.id %>
+                            </td> -->
+                            <td>
+                                <%= item.item_name %>
+                            </td>
+                            <td>
+                                <%= item.quantity %>
+                            </td>
+                            <td>                                
+                                <form action="/delete" method="POST">
+                                    <button type="submit" name="del" value="<%= item.id %>">
+                                        <img width="20" height="20" src="https://img.icons8.com/parakeet-line/48/filled-trash.png" alt="filled-trash"/>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+  const texts = ["management", "analysis", "recording"];
+  let index = 0;
+
+  setInterval(() => {
+    document.getElementById("textSpan").textContent = texts[index];
+    index = (index + 1) % texts.length;
+  }, 500);
+</script>
+</body>
+</html>
